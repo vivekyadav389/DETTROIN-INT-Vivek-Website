@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const CATEGORIES = ["All", "Sports", "Events", "Academics", "Cultural"];
 
@@ -19,18 +20,37 @@ export function KisGallery() {
       ? PHOTOS
       : PHOTOS.filter((photo) => photo.category === activeCategory);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.95, y: 20 },
+    show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
-    <section className="bg-kis-cream px-6 py-16 md:px-16 md:py-20">
-      <div className="mb-10 text-center">
+    <section className="bg-kis-cream px-6 py-16 md:px-16 md:py-20 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+        className="mb-10 text-center"
+      >
         <div className="mb-3 font-kis-body text-xs uppercase tracking-widest text-kis-muted-foreground">
           Photo Gallery
         </div>
         <h2 className="font-kis-headings text-3xl font-bold text-kis-navy">
           Our Life at KIS
         </h2>
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         role="tablist"
         aria-label="Filter gallery by category"
         className="mb-8 flex flex-wrap justify-center gap-3"
@@ -50,12 +70,19 @@ export function KisGallery() {
             {category}
           </Button>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="grid grid-cols-2 gap-3 md:grid-cols-4"
+      >
         {visiblePhotos.map((photo) => (
-          <div
+          <motion.div
             key={photo.src}
+            variants={itemVariants}
             className={`overflow-hidden rounded-xl ${photo.span ?? ""}`}
           >
             <img
@@ -63,9 +90,9 @@ export function KisGallery() {
               alt={photo.alt}
               className="h-full w-full object-cover"
             />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="mt-8 text-center">
         <Button

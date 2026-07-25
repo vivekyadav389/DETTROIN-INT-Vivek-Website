@@ -1,24 +1,31 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const AVATARS = [
-  { src: "/images/avatars/student-1.jpg", alt: "Student portrait" },
-  { src: "/images/avatars/student-2.jpg", alt: "Student portrait" },
-  { src: "/images/avatars/student-3.jpg", alt: "Student portrait" },
-  { src: "/images/avatars/student-4.jpg", alt: "Student portrait" },
+  { src: "/student/website 2.jpg", alt: "Student portrait" },
+  { src: "/student/website 3.jpg", alt: "Student portrait" },
+  { src: "/student/website 4.jpg", alt: "Student portrait" },
+  { src: "/student/website 5.jpg", alt: "Student portrait" },
 ];
 
 const COLLAGE_AVATARS = [
-  "/images/avatars/student-5.jpg",
-  "/images/avatars/student-6.jpg",
-  "/images/avatars/student-7.jpg",
-  "/images/avatars/student-8.jpg",
+  "/student/website 2.jpg",
+  "/student/website 3.jpg",
+  "/student/website 4.jpg",
+  "/student/website 5.jpg",
 ];
 
 export function KisHero() {
   return (
-    <section className="flex flex-col gap-10 bg-kis-cream px-6 pt-12 md:flex-row md:items-start md:gap-16 md:px-16 md:pt-16">
-      <div className="flex-1 md:pt-6">
+    <section className="flex flex-col gap-10 bg-kis-cream px-6 pt-12 md:flex-row md:items-start md:gap-16 md:px-16 md:pt-16 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex-1 md:pt-6"
+      >
         <div className="mb-6 flex items-center gap-2">
           <span className="font-kis-body text-xs uppercase tracking-widest text-kis-muted-foreground">
             Admissions Open
@@ -71,36 +78,45 @@ export function KisHero() {
             6,000+ students learning on campus right now
           </span>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="w-full flex-shrink-0 md:w-96">
-        <div className="overflow-hidden rounded-xl border border-kis-border">
-          <div className="grid grid-cols-2 gap-2">
-            <div className="col-span-2 overflow-hidden rounded-lg">
-              <img
-                src="/images/hero/students-outdoors.jpg"
-                alt="Students smiling outdoors on campus"
-                className="aspect-video w-full object-cover"
-              />
-            </div>
-            {COLLAGE_AVATARS.map((src, i) => (
-              <div key={i} className="overflow-hidden rounded-lg">
-                <img
-                  src={src}
-                  alt="Student portrait"
-                  className="w-full object-cover"
-                />
-              </div>
-            ))}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative w-full max-w-xs flex-shrink-0 pt-8 md:w-[320px] md:pt-0 lg:w-[360px]"
+      >
+        <div className="relative h-[340px] w-full md:h-[400px] lg:h-[440px]">
+          {/* Top Left */}
+          <div className="absolute left-[2%] top-0 z-10 w-[45%] -rotate-3 overflow-hidden border-[3px] border-[#a58641] bg-[#a58641] shadow-2xl transition-all duration-300 hover:z-[60] hover:scale-105">
+            <img src="/student/website 2.jpg" alt="Student" className="aspect-[3/4] w-full object-cover" />
+          </div>
+          {/* Top Right */}
+          <div className="absolute right-[2%] top-[8%] z-20 w-[45%] rotate-6 overflow-hidden border-[3px] border-[#a58641] bg-[#a58641] shadow-2xl transition-all duration-300 hover:z-[60] hover:scale-105">
+            <img src="/student/website 3.jpg" alt="Student" className="aspect-[3/4] w-full object-cover" />
+          </div>
+          {/* Middle Left */}
+          <div className="absolute left-[-2%] top-[35%] z-30 w-[55%] rotate-2 overflow-hidden border-[3px] border-[#a58641] bg-[#a58641] shadow-2xl transition-all duration-300 hover:z-[60] hover:scale-105">
+            <img src="/student/website 4.jpg" alt="Student" className="aspect-[4/3] w-full object-cover" />
+          </div>
+          {/* Middle Right */}
+          <div className="absolute right-[-2%] top-[40%] z-40 w-[55%] -rotate-3 overflow-hidden border-[3px] border-[#a58641] bg-[#a58641] shadow-2xl transition-all duration-300 hover:z-[60] hover:scale-105">
+            <img src="/student/website 5.jpg" alt="Student" className="aspect-[4/3] w-full object-cover" />
+          </div>
+          {/* Bottom Center */}
+          <div className="absolute bottom-[5%] left-[10%] z-50 w-[80%] rotate-1 overflow-hidden border-[3px] border-[#a58641] bg-[#a58641] shadow-2xl transition-all duration-300 hover:z-[60] hover:scale-105">
+            <img src="/student/website 1.jpg" alt="Student" className="aspect-[4/3] w-full object-cover" />
           </div>
         </div>
-        <div className="mt-3 flex items-center gap-2 rounded-lg bg-kis-navy px-4 py-3">
-          <span className="inline-block h-2 w-2 rounded-full bg-kis-accent" />
-          <span className="font-kis-body text-sm text-kis-cream">
-            6,000+ students learning on campus right now
+
+        <div className="absolute -bottom-4 left-1/2 z-[70] flex w-max -translate-x-1/2 items-center gap-3 rounded-full border border-[#a58641]/30 bg-kis-navy px-5 py-2.5 shadow-2xl">
+          <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-kis-accent" />
+          <span className="font-kis-body text-xs font-medium tracking-wide text-kis-cream">
+            6,000+ students on campus
           </span>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,9 +1,16 @@
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function KisPrincipal({ onPrevious, onNext }) {
   return (
-    <section className="flex flex-col gap-10 bg-kis-cream px-6 py-16 md:flex-row md:gap-16 md:px-16 md:py-20">
-      <div className="flex-1">
+    <section className="flex flex-col gap-10 bg-kis-cream px-6 py-16 md:flex-row md:gap-16 md:px-16 md:py-20 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="flex-1"
+      >
         <div className="mb-3 font-kis-body text-xs uppercase tracking-widest text-kis-muted-foreground">
           Leadership
         </div>
@@ -35,9 +42,15 @@ export function KisPrincipal({ onPrevious, onNext }) {
           Read More
           <ArrowRight className="h-3.5 w-3.5" />
         </a>
-      </div>
+      </motion.div>
 
-      <div className="flex w-full flex-shrink-0 flex-col items-center md:w-64">
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="flex w-full flex-shrink-0 flex-col items-center md:w-64"
+      >
         <div className="mb-4 w-full overflow-hidden rounded-xl">
           <img
             src="/images/leadership/principal.jpg"
@@ -70,7 +83,7 @@ export function KisPrincipal({ onPrevious, onNext }) {
             <ChevronRight className="h-3.5 w-3.5 text-kis-cream" />
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

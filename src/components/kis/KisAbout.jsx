@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HIGHLIGHTS = [
   "CBSE Affiliated Curriculum",
@@ -9,8 +10,14 @@ const HIGHLIGHTS = [
 
 export function KisAbout() {
   return (
-    <section className="flex flex-col gap-10 bg-kis-cream px-6 py-16 md:flex-row md:gap-16 md:px-16 md:py-20">
-      <div className="grid w-full flex-shrink-0 grid-cols-2 gap-3 md:w-96">
+    <section className="flex flex-col gap-10 bg-kis-cream px-6 py-16 md:flex-row md:gap-16 md:px-16 md:py-20 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="grid w-full flex-shrink-0 grid-cols-2 gap-3 md:w-96"
+      >
         <div className="col-span-2 overflow-hidden rounded-lg">
           <img
             src="/images/about/classroom.jpg"
@@ -32,9 +39,15 @@ export function KisAbout() {
             className="aspect-[4/3] w-full object-cover"
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex-1">
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="flex-1"
+      >
         <div className="mb-3 font-kis-body text-xs uppercase tracking-widest text-kis-muted-foreground">
           About the School
         </div>
@@ -72,7 +85,7 @@ export function KisAbout() {
           Discover More
           <ArrowRight className="h-3.5 w-3.5" />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }

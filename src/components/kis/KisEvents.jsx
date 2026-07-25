@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const EVENTS = [
   {
@@ -30,16 +31,16 @@ const EVENTS = [
 
 function KisEventCard({ image, alt, tag, title, date, attendance }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-kis-border bg-kis-cream">
+    <article className="flex flex-col h-full overflow-hidden rounded-xl border border-kis-border bg-kis-cream">
       <img src={image} alt={alt} className="aspect-video w-full object-cover" />
-      <div className="flex flex-col gap-2 p-5">
+      <div className="flex flex-col gap-2 p-5 flex-1">
         <span className="font-kis-body text-xs font-medium uppercase tracking-wider text-kis-primary">
           {tag}
         </span>
         <h3 className="font-kis-headings text-lg font-bold leading-snug text-kis-navy">
           {title}
         </h3>
-        <div className="flex gap-4 font-kis-body text-xs text-kis-muted-foreground">
+        <div className="mt-auto flex gap-4 pt-4 font-kis-body text-xs text-kis-muted-foreground">
           <span>{date}</span>
           <span>{attendance}</span>
         </div>
@@ -49,9 +50,24 @@ function KisEventCard({ image, alt, tag, title, date, attendance }) {
 }
 
 export function KisEvents() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
-    <section className="bg-kis-muted px-6 py-16 md:px-16 md:py-20">
-      <div className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+    <section className="bg-kis-muted px-6 py-16 md:px-16 md:py-20 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+        className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+      >
         <div>
           <div className="mb-3 font-kis-body text-xs uppercase tracking-widest text-kis-muted-foreground">
             Events
@@ -72,13 +88,21 @@ export function KisEvents() {
             <ArrowRight className="h-3 w-3" />
           </a>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-1 gap-6 md:grid-cols-3"
+      >
         {EVENTS.map((event) => (
-          <KisEventCard key={event.title} {...event} />
+          <motion.div key={event.title} variants={itemVariants} className="h-full">
+            <KisEventCard {...event} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

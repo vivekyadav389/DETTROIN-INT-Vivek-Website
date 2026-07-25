@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export function KisCta() {
   return (
-    <section className="bg-kis-navy px-6 py-16 text-center md:px-16 md:py-20">
+    <motion.section 
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+      className="bg-kis-navy px-6 py-16 text-center md:px-16 md:py-20"
+    >
       <div className="mb-4 font-kis-body text-xs uppercase tracking-widest text-kis-muted">
         Get Started
       </div>
@@ -24,6 +31,6 @@ export function KisCta() {
           Know More
         </Button>
       </div>
-    </section>
+    </motion.section>
   );
 }

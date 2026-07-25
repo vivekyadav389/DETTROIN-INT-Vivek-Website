@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const FOOTER_COLUMNS = [
   {
     title: "Krishna",
@@ -19,7 +21,13 @@ const FOOTER_COLUMNS = [
 
 export function KisFooter() {
   return (
-    <footer className="border-t border-kis-navy-light bg-kis-navy px-6 py-14 md:px-16">
+    <motion.footer 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="border-t border-kis-navy-light bg-kis-navy px-6 py-14 md:px-16"
+    >
       <div className="mb-10 grid grid-cols-2 gap-8 md:grid-cols-5 md:gap-10">
         <div className="col-span-2 md:col-span-1">
           <div className="mb-4 flex items-center gap-2">
@@ -57,6 +65,6 @@ export function KisFooter() {
         <span>© 2025 Krishna International School. All rights reserved.</span>
         <span>Designed with care.</span>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

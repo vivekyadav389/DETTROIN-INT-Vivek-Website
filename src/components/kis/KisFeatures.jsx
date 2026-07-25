@@ -1,4 +1,5 @@
 import { GraduationCap, Library, ShieldCheck, Wind } from "lucide-react";
+import { motion } from "framer-motion";
 
 const FEATURES = [
   {
@@ -29,7 +30,7 @@ const FEATURES = [
 
 function KisFeatureCard({ icon: Icon, title, description }) {
   return (
-    <div className="flex flex-col gap-3 rounded-lg border border-kis-border bg-kis-cream p-6">
+    <div className="flex h-full flex-col gap-3 rounded-lg border border-kis-border bg-kis-cream p-6">
       <div className="flex h-10 w-10 items-center justify-center rounded-md bg-kis-accent">
         <Icon className="h-5 w-5 text-kis-navy" aria-hidden="true" />
       </div>
@@ -44,9 +45,24 @@ function KisFeatureCard({ icon: Icon, title, description }) {
 }
 
 export function KisFeatures() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
-    <section className="bg-kis-muted px-6 py-16 md:px-16 md:py-20">
-      <div className="mb-12 text-center">
+    <section className="bg-kis-muted px-6 py-16 md:px-16 md:py-20 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+        className="mb-12 text-center"
+      >
         <div className="mb-3 font-kis-body text-xs uppercase tracking-widest text-kis-muted-foreground">
           Our Offer
         </div>
@@ -55,12 +71,20 @@ export function KisFeatures() {
           <br />
           Under One Roof
         </h2>
-      </div>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      </motion.div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+      >
         {FEATURES.map((feature) => (
-          <KisFeatureCard key={feature.title} {...feature} />
+          <motion.div key={feature.title} variants={itemVariants} className="h-full">
+            <KisFeatureCard {...feature} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
