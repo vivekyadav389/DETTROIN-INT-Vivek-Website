@@ -20,6 +20,9 @@ export function KisNavbar({ onEnrollClick }) {
             let path = "#";
             if (label === "About") path = "/about";
             if (label === "Life at KIS") path = "/life-at-kis";
+            if (label === "Academics") path = "/academics";
+            if (label === "Admission") path = "/enroll";
+            if (label === "Contact") path = "/contact";
             
             return (
               <Link

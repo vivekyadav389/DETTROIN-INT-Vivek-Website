@@ -4,6 +4,8 @@ import KisLandingPage from './pages/HomePage';
 import { KisAboutPage } from './pages/AboutPage';
 import { LifeAtKisPage } from './pages/LifeAtKisPage';
 import { KisEnrollPage } from './pages/EnrollPage';
+import { AcademicsPage } from './pages/AcademicsPage';
+import { ContactPage } from './pages/ContactPage';
 import './index.css';
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
         <Route path="/about" element={<KisAboutPage />} />
         <Route path="/life-at-kis" element={<LifeAtKisPage />} />
         <Route path="/enroll" element={<KisEnrollPage />} />
+        <Route path="/academics" element={<AcademicsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </div>
   );
