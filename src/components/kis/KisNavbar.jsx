@@ -10,19 +10,8 @@ export function KisNavbar() {
         className="flex items-center justify-between px-6 py-4 md:px-16"
       >
         <a href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-md bg-kis-navy">
-            <span className="font-kis-headings text-lg font-bold text-kis-cream">
-              K
-            </span>
-          </div>
-          <div>
-            <div className="font-kis-headings text-base font-bold leading-tight text-kis-navy">
-              Krishna International
-            </div>
-            <div className="font-kis-body text-xs uppercase tracking-widest text-kis-muted-foreground">
-              CBSE · Aligarh
-            </div>
-          </div>
+          <img src="/kis-logo.png" alt="KIS Logo" className="h-10 w-auto object-contain" />
+          <img src="/kis-wide-name.png" alt="Krishna International School" className="h-10 w-auto object-contain" />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

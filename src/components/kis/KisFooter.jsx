@@ -23,14 +23,8 @@ export function KisFooter() {
       <div className="mb-10 grid grid-cols-2 gap-8 md:grid-cols-5 md:gap-10">
         <div className="col-span-2 md:col-span-1">
           <div className="mb-4 flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-kis-cream">
-              <span className="font-kis-headings text-base font-bold text-kis-navy">
-                K
-              </span>
-            </div>
-            <span className="font-kis-headings text-base font-bold text-kis-cream">
-              Krishna
-            </span>
+            <img src="/kis-logo.png" alt="KIS Logo" className="h-8 w-auto object-contain" />
+            <img src="/kis-wide-name.png" alt="Krishna International School" className="h-6 w-auto object-contain brightness-0 invert" />
           </div>
           <p className="font-kis-body text-xs leading-relaxed text-kis-muted">
             Nurturing young minds since 2000. CBSE affiliated school in
