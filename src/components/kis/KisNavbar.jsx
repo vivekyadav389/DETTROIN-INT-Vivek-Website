@@ -86,6 +86,11 @@ export function KisNavbar() {
                       if (dropItem === "Why Krishna International?") href = "/about#why-kis";
                       if (dropItem === "Recognition and Award") href = "/about#recognition";
                     }
+                    
+                    if (item.label === "JOIN US") {
+                      if (dropItem === "Vacancy") href = "/join";
+                      if (dropItem === "Online Student Registration") href = "/enroll";
+                    }
 
                     const isExternal = href.startsWith("http");
 

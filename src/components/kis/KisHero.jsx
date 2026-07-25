@@ -19,7 +19,7 @@ const COLLAGE_AVATARS = [
 
 export function KisHero() {
   return (
-    <section className="flex flex-col gap-10 bg-kis-cream px-6 py-12 md:flex-row md:items-start md:gap-16 md:px-16 md:py-16 overflow-hidden">
+    <section className="flex flex-col gap-10 bg-kis-cream px-6 pt-12 pb-6 md:flex-row md:items-start md:gap-16 md:px-16 md:pt-16 md:pb-8 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
