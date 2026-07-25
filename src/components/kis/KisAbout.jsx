@@ -14,29 +14,36 @@ export function KisAbout() {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="grid w-full flex-shrink-0 grid-cols-2 gap-3 md:w-96"
+        className="relative grid w-full flex-shrink-0 grid-cols-2 p-6 md:w-[450px]"
       >
-        <div className="col-span-2 overflow-hidden rounded-lg">
+        <div className="z-10 -rotate-3 transform rounded-sm bg-[#fdfbf7] p-2 shadow-xl transition-all duration-300 hover:z-50 hover:scale-105 hover:rotate-0">
           <img
-            src="/images/about/classroom.jpg"
-            alt="Students studying together in a bright classroom"
-            className="aspect-video w-full object-cover"
+            src="/images/about/a2.jpg"
+            alt="About the school 1"
+            className="aspect-square w-full object-cover"
           />
         </div>
-        <div className="overflow-hidden rounded-lg">
+        <div className="z-20 -ml-4 mt-8 rotate-3 transform rounded-sm bg-[#fdfbf7] p-2 shadow-xl transition-all duration-300 hover:z-50 hover:scale-105 hover:rotate-0">
           <img
-            src="/images/about/cricket.jpg"
-            alt="Students playing cricket on the sports field"
-            className="aspect-[4/3] w-full object-cover"
+            src="/images/about/a3.jpg"
+            alt="About the school 2"
+            className="aspect-square w-full object-cover"
           />
         </div>
-        <div className="overflow-hidden rounded-lg">
+        <div className="z-30 -mt-8 rotate-2 transform rounded-sm bg-[#fdfbf7] p-2 shadow-xl transition-all duration-300 hover:z-50 hover:scale-105 hover:rotate-0">
           <img
-            src="/images/about/annual-day.jpg"
-            alt="Students performing on stage at annual day"
-            className="aspect-[4/3] w-full object-cover"
+            src="/images/about/a4.jpg"
+            alt="About the school 3"
+            className="aspect-square w-full object-cover"
+          />
+        </div>
+        <div className="z-40 -ml-4 mt-2 -rotate-2 transform rounded-sm bg-[#fdfbf7] p-2 shadow-xl transition-all duration-300 hover:z-50 hover:scale-105 hover:rotate-0">
+          <img
+            src="/images/about/a5.jpg"
+            alt="About the school 4"
+            className="aspect-square w-full object-cover"
           />
         </div>
       </motion.div>
@@ -44,7 +51,7 @@ export function KisAbout() {
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6 }}
         className="flex-1"
       >

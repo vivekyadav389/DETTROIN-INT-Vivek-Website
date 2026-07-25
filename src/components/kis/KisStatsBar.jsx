@@ -23,7 +23,7 @@ export function KisStatsBar() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         className="flex flex-col divide-y divide-kis-navy-light md:flex-row md:divide-x md:divide-y-0"
       >
         {STATS.map((stat) => (

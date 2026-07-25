@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export function KisCta() {
+export function KisCta({ onEnrollClick }) {
   return (
     <motion.section 
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.6 }}
       className="bg-kis-navy px-6 py-16 text-center md:px-16 md:py-20"
     >
@@ -21,8 +22,8 @@ export function KisCta() {
         confident, compassionate leaders of tomorrow.
       </p>
       <div className="flex flex-wrap justify-center gap-4">
-        <Button className="rounded-xl bg-kis-primary px-7 py-3 font-kis-body font-medium text-kis-primary-foreground hover:bg-kis-primary/90">
-          Apply Now
+        <Button asChild className="rounded-xl bg-kis-primary px-7 py-3 font-kis-body font-medium text-kis-primary-foreground hover:bg-kis-primary/90">
+          <Link to="/enroll">Apply Now</Link>
         </Button>
         <Button
           variant="outline"

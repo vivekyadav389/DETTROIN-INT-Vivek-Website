@@ -24,7 +24,7 @@ export function KisFooter() {
     <motion.footer 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={{ duration: 0.6 }}
       className="border-t border-kis-navy-light bg-kis-navy px-6 py-14 md:px-16"
     >

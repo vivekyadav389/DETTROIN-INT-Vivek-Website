@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const CATEGORIES = ["All", "Sports", "Events", "Academics", "Cultural"];
 
 const PHOTOS = [
-  { src: "/images/gallery/lab.jpg", alt: "Students doing a science experiment in the lab", span: "col-span-2 row-span-2", category: "Academics" },
+  { src: "/images/gallery/lab.jpg", alt: "Students doing a science experiment in the lab", category: "Academics" },
   { src: "/images/gallery/track.jpg", alt: "Children running on the school track on sports day", category: "Sports" },
   { src: "/images/gallery/dance.jpg", alt: "Students performing classical Indian dance on stage", category: "Cultural" },
   { src: "/images/gallery/prize.jpg", alt: "Prize distribution ceremony with students and trophies", category: "Events" },
@@ -34,7 +34,7 @@ export function KisGallery() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.5 }}
         className="mb-10 text-center"
       >
@@ -49,7 +49,7 @@ export function KisGallery() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.5 }}
         role="tablist"
         aria-label="Filter gallery by category"
@@ -76,8 +76,8 @@ export function KisGallery() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
-        className="grid grid-cols-2 gap-3 md:grid-cols-4"
+        viewport={{ once: false, amount: 0.1 }}
+        className="grid grid-cols-2 gap-3 md:grid-cols-5"
       >
         {visiblePhotos.map((photo) => (
           <motion.div
@@ -88,7 +88,7 @@ export function KisGallery() {
             <img
               src={photo.src}
               alt={photo.alt}
-              className="h-full w-full object-cover"
+              className="aspect-square h-full w-full object-cover"
             />
           </motion.div>
         ))}

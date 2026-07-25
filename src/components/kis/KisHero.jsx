@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -18,11 +19,11 @@ const COLLAGE_AVATARS = [
 
 export function KisHero() {
   return (
-    <section className="flex flex-col gap-10 bg-kis-cream px-6 pt-12 md:flex-row md:items-start md:gap-16 md:px-16 md:pt-16 overflow-hidden">
+    <section className="flex flex-col gap-10 bg-kis-cream px-6 py-12 md:flex-row md:items-start md:gap-16 md:px-16 md:py-16 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.6 }}
         className="flex-1 md:pt-6"
       >
@@ -51,8 +52,8 @@ export function KisHero() {
         </p>
 
         <div className="mb-12 flex flex-wrap gap-4">
-          <Button className="rounded-xl bg-kis-primary px-6 py-3 font-kis-body font-medium text-kis-primary-foreground hover:bg-kis-primary/90">
-            Start Enrollment
+          <Button asChild className="rounded-xl bg-kis-primary px-8 py-3.5 font-kis-body text-base font-medium text-kis-primary-foreground hover:bg-kis-primary/90">
+            <Link to="/enroll">Start Enrollment</Link>
           </Button>
           <Button
             variant="outline"
@@ -83,7 +84,7 @@ export function KisHero() {
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.6 }}
         className="relative w-full max-w-xs flex-shrink-0 pt-8 md:w-[320px] md:pt-0 lg:w-[360px]"
       >

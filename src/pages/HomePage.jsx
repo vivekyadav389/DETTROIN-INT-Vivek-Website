@@ -5,7 +5,6 @@ import { KisAbout } from "@/components/kis/KisAbout";
 import { KisFeatures } from "@/components/kis/KisFeatures";
 import { KisPrincipal } from "@/components/kis/KisPrincipal";
 import { KisEvents } from "@/components/kis/KisEvents";
-import { KisGallery } from "@/components/kis/KisGallery";
 import { KisCta } from "@/components/kis/KisCta";
 import { KisFooter } from "@/components/kis/KisFooter";
 
@@ -19,7 +18,7 @@ export default function KisLandingPage() {
       <KisFeatures />
       <KisPrincipal />
       <KisEvents />
-      <KisGallery />
+
       <KisCta />
       <KisFooter />
     </div>

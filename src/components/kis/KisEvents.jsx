@@ -8,6 +8,7 @@ const EVENTS = [
     alt: "Investiture ceremony, students in uniform on stage",
     tag: "Achievement",
     title: "Investiture Ceremony 2025",
+    description: "We empower our students to take on responsibilities early, cultivating leadership, discipline, and a strong sense of duty towards their school and community.",
     date: "25 July 2025",
     attendance: "500+ Students",
   },
@@ -16,6 +17,7 @@ const EVENTS = [
     alt: "Independence Day celebration with students and flag",
     tag: "Patriotism",
     title: "Independence Day Celebration",
+    description: "Fostering a deep sense of patriotism, our students proudly celebrate the spirit of freedom and unity with cultural performances and flag hoisting.",
     date: "15 August 2024",
     attendance: "400+ Students",
   },
@@ -24,25 +26,29 @@ const EVENTS = [
     alt: "Students dancing in colorful costumes at the cultural fest",
     tag: "Cultural",
     title: "Annual Cultural Fest 2024",
+    description: "We encourage every student at School to express themselves creatively, showcasing their talents in dance, music, and arts on a grand stage.",
     date: "10 November 2024",
     attendance: "600+ Students",
   },
 ];
 
-function KisEventCard({ image, alt, tag, title, date, attendance }) {
+function KisEventCard({ image, alt, tag, title, description }) {
   return (
-    <article className="flex flex-col h-full overflow-hidden rounded-xl border border-kis-border bg-kis-cream">
-      <img src={image} alt={alt} className="aspect-video w-full object-cover" />
-      <div className="flex flex-col gap-2 p-5 flex-1">
-        <span className="font-kis-body text-xs font-medium uppercase tracking-wider text-kis-primary">
-          {tag}
-        </span>
-        <h3 className="font-kis-headings text-lg font-bold leading-snug text-kis-navy">
+    <article className="group flex flex-col h-full overflow-hidden rounded-xl border border-kis-border bg-kis-cream transition-shadow hover:shadow-lg">
+      <div className="overflow-hidden">
+        <img src={image} alt={alt} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      </div>
+      <div className="flex flex-col gap-3 p-6 flex-1">
+        <h3 className="font-kis-headings text-xl font-bold leading-snug text-kis-navy">
           {title}
         </h3>
-        <div className="mt-auto flex gap-4 pt-4 font-kis-body text-xs text-kis-muted-foreground">
-          <span>{date}</span>
-          <span>{attendance}</span>
+        <p className="font-kis-body text-sm leading-relaxed text-kis-muted-foreground">
+          {description}
+        </p>
+        <div className="mt-auto pt-4">
+          <a href="#" className="inline-flex items-center gap-1 font-kis-body text-sm font-bold text-kis-primary hover:underline hover:text-kis-primary/80">
+            Explore now
+          </a>
         </div>
       </div>
     </article>
@@ -52,11 +58,11 @@ function KisEventCard({ image, alt, tag, title, date, attendance }) {
 export function KisEvents() {
   const containerVariants = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+    show: { opacity: 1, transition: { staggerChildren: 0.25 } }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+    hidden: { opacity: 0, y: 80 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
   };
 
   return (
@@ -64,7 +70,7 @@ export function KisEvents() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.5 }}
         className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
       >
@@ -94,7 +100,7 @@ export function KisEvents() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.2 }}
         className="grid grid-cols-1 gap-6 md:grid-cols-3"
       >
         {EVENTS.map((event) => (

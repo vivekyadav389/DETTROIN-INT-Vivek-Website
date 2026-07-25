@@ -7,7 +7,7 @@ export function KisPrincipal({ onPrevious, onNext }) {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6 }}
         className="flex-1"
       >
@@ -15,7 +15,7 @@ export function KisPrincipal({ onPrevious, onNext }) {
           Leadership
         </div>
         <h2 className="mb-8 font-kis-headings text-3xl font-bold text-kis-navy">
-          Words from the Principal&apos;s Desk
+          Words from the Chairman&apos;s Desk
         </h2>
 
         <blockquote className="mb-6 border-l-4 border-kis-primary pl-6">
@@ -47,22 +47,22 @@ export function KisPrincipal({ onPrevious, onNext }) {
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6 }}
         className="flex w-full flex-shrink-0 flex-col items-center md:w-64"
       >
         <div className="mb-4 w-full overflow-hidden rounded-xl">
           <img
-            src="/images/leadership/principal.jpg"
-            alt="Mrs. Reeba Sharma, Principal of Krishna International School"
+            src="/images/leadership/director-landing.jpg"
+            alt="Pravin Agarwal, Managing Chairman of Krishna International School"
             className="w-full object-cover"
           />
         </div>
         <div className="font-kis-headings text-base font-bold text-kis-navy">
-          Mrs. Reeba Sharma
+          Pravin Agarwal
         </div>
         <div className="mt-1 text-center font-kis-body text-xs text-kis-muted-foreground">
-          Principal, Krishna International School
+          Managing Chairman, Krishna International School
         </div>
 
         <div className="mt-3 flex gap-2">
