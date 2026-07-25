@@ -1,20 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --kis-foreground: #1a2744;
-  --kis-border: #ddd5c4;
-  --kis-primary: #c4513a;
-  --kis-primary-foreground: #ffffff;
-  --kis-muted: #e6dfd3;
-  --kis-muted-foreground: #6b6255;
-  --kis-accent: #c49a3a;
-  --kis-navy: #1a2744;
-  --kis-navy-light: #243460;
-  --kis-cream: #f5f0e8;
+@theme {
+  --color-kis-foreground: #1a2744;
+  --color-kis-border: #ddd5c4;
+  --color-kis-primary: #c4513a;
+  --color-kis-primary-foreground: #ffffff;
+  --color-kis-muted: #e6dfd3;
+  --color-kis-muted-foreground: #6b6255;
+  --color-kis-accent: #c49a3a;
+  --color-kis-navy: #1a2744;
+  --color-kis-navy-light: #243460;
+  --color-kis-cream: #f5f0e8;
 
   --font-kis-body: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-kis-headings: "PT Serif", Georgia, serif;
@@ -26,5 +23,6 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-kis-cream);
+  color: var(--color-kis-foreground);
 }
