@@ -3,14 +3,14 @@
 This repository contains the completely redesigned website for Krishna International School, developed as part of my internship program.
 
 ## Intern Details
-- **Full Name:** Vivek Yadav
+- **Full Name:** Vivek Kumar
 - **Intern ID:** [Your Intern ID]
-- **Email Address:** [Your Email Address]
+- **Email Address:** [vivekya9504@gmail.com]
 - **GitHub Username:** vivekyadav389
 
 ## Project Details
 - **Selected Website:** Krishna International School (kisaligarh.com)
-- **Live Demo Link:** [Your Live Demo Link here]
+- **Live Demo Link:** [https://dettroin-int-vivek-website.vercel.app/]
 
 ## Technologies Used
 - **Frontend Framework:** React (with Vite)
