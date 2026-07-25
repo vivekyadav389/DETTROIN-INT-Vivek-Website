@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { KisNavbar } from "@/components/kis/KisNavbar";
 import { KisFooter } from "@/components/kis/KisFooter";
 import { KisRegistrationModal } from "@/components/kis/KisRegistrationModal";
@@ -29,8 +30,19 @@ const HERO_IMAGES = {
 };
 
 export function KisAboutPage() {
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState("CHAIRMAN'S MESSAGE");
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (hash === "overview") setActiveTab("OVERVIEW");
+    else if (hash === "chairman") setActiveTab("CHAIRMAN'S MESSAGE");
+    else if (hash === "principal") setActiveTab("PRINCIPAL'S MESSAGE");
+    else if (hash === "campus") setActiveTab("QUINTESSENTIAL CAMPUS");
+    else if (hash === "why-kis") setActiveTab("WHY KIS?");
+    else if (hash === "recognition") setActiveTab("RECOGNITION AND AWARDS");
+  }, [location.hash]);
 
   return (
     <div className="min-w-0 bg-kis-cream text-kis-foreground font-kis-body">

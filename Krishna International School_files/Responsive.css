@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100&display=swap');
+/* ===================Large  screen layout======================= */
+
+/* ===================Large  screen layout======================= */
+/* ===================tab screen layout========================== */
+@media only screen and (max-width:992px) {
+
+}
+/* =========xx==========tab screen layout============xx========== */
+/* ===================mobile screen layout======================= */
+@media only screen and (max-width: 768px) {
+body{
+/*  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(138,240,25,1) 0%, rgba(47,50,54,1) 0%, rgba(15,51,45,1) 0%, rgba(15,46,50,1) 0%, rgba(15,56,39,1) 0%, rgba(7,8,50,0.9808298319327731) 0%, rgba(29,64,110,0.9948354341736695) 0%, rgba(40,187,187,1) 0%, rgba(10,36,35,1) 0%, rgba(4,46,54,1) 0%, rgba(0,0,0,1) 48%, rgba(0,4,4,1) 49%, rgba(18,64,20,1) 100%, rgba(21,74,42,1) 100%, rgba(17,131,158,1) 100%, rgba(15,44,53,1) 100%, rgba(15,44,53,1) 100%, rgba(15,47,50,1) 100%) !important;  */
+}
+.def_btn {
+    background: linear-gradient(92.5deg, #1DFF85 0.77%, #1DFFE4 101.95%);
+    color: black;
+    margin-right: 10px;
+    height: 33px !important;
+    text-decoration: none;
+    border: none;
+    padding: 4px 11px !important;
+    border-radius: 21px;
+    font-weight: bold;
+    font-size: 8px !important;
+    font-family: 'Poppins';
+}
+.display{
+display: none !important;
+}
+#newanimate{
+    margin-left: -37px !important;
+}
+.abtheadingtwo {
+    width: 100%;
+    height: 63px;
+    left: 83px;
+    top: 791px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 63px;
+    color: #FFFFFF;
+}
+.mobile{
+display: block !important;
+}
+.mynavnone{
+display: none !important;
+}
+.sidenavheader img {
+top: 34px;
+position: absolute;
+width: 31px;
+left: 29px;
+z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+/* margin: 10px; */
+cursor: pointer;
+}
+.elseu0{
+position: absolute;
+width: 198px;
+height: 402px;
+left: -43px;
+top: 49px;
+background: #1DC9FF;
+opacity: 0.38;
+filter: blur(144px);
+margin-top: -80px;
+}
+.school_address{
+margin-left: 18px !important;
+}
+.elseu1 {
+position: absolute;
+width: 65px;
+height: 382px;
+right: 0;
+top: 219px;
+opacity: 0.43;
+filter: blur(144px);
+margin-top: -80px;
+}
+.tamtamchild{
+position: absolute;
+width: 133px;
+height: 178px;
+left: 111px;
+top: 167px;
+background: #1DC9FF;
+opacity: 0.42;
+filter: blur(175px);
+}
+.tamtamchildtwo{
+display: none;
+}
+.mainelse3{
+display: none;
+}
+.mainelse0{
+display: none;
+}
+.mainelse1{
+display: none;
+}
+.maxsumelsefooter{
+display: none;
+}
+.home_content .container h4 span {
+font-size: 30px;
+}
+.home_content .container h4 {
+font-size: 32px;
+}
+.rectone {
+width: 167.61px;
+height: 255.32px;
+border-radius: 99px;
+border-top: 1px solid white;
+border-left: 1px solid white;
+border-right: 1px solid white;
+}
+.jumping{
+    font-size: 47px !important;
+}
+.percet{
+margin-left: 205px !important;
+margin-top: -122px !important;
+}
+.perttwo{
+margin-top: -109px !important;
+margin-left: -5px !important;
+}
+.preway{
+margin-top: 63px !important;
+margin-left: 18px !important;
+}
+.lasdidit{
+margin-top: -117px;
+}
+.mynn{
+ padding-left: 24px!important;
+}
+.snsp{
+margin-left: 21px !important;
+}
+.dotone {
+width: 20px;
+height: 20px;
+background: #8061FF;
+border-radius: 50%;
+position: absolute;
+left: 78px;
+top: -25px;
+}
+.myhh{
+	    margin-left: 19px!important;
+}
+.MYNEWHEAD {
+    width: 100% !important;
+    height: 41px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 41px;
+    background: linear-gradient(92.84deg, #1DFF85 0%, #1DFFE4 24.72%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.dotfour {
+width: 20px;
+height: 20px;
+background: #FFAD61;
+border-radius: 50%;
+position: absolute;
+right: 74px;
+top: 107px;
+}
+.dotthree {
+width: 20px;
+height: 20px;
+background: #FF8561;
+border-radius: 50%;
+position: absolute;
+right: 261px;
+bottom: 264px;
+}
+element.style {
+}
+.dottwo {
+width: 20px;
+height: 20px;
+background: #61AAFF;
+border-radius: 50%;
+position: absolute;
+left: 245px;
+bottom: 111px;
+}
+.none{
+display: none !important;
+}
+.block{
+display: block  !important;
+color: white;
+padding-left: 5px;
+color: white;
+font-family: 'Poppins', sans-serif;
+}
+.modone img {
+width: 151.24px;
+height: 157.24px;
+border-top-left-radius: 173.1px;
+border-top-right-radius: 173.1px;
+border-bottom-left-radius: 173.1px;
+margin-left: -8px;
+}
+.modtwo img {
+width: 146.24px;
+height: 146.24px;
+border-radius: 5px;
+margin-top: 12px;
+margin-left: 1px;
+}
+.modthree img {
+width: 146.24px;
+height: 146.24px;
+border-radius: 5px;
+margin-left: 4px;
+margin-top: 10px;
+}
+.modfive img {
+width: 151.24px;
+height: 157.24px;
+border-top-right-radius: 173.1px;
+border-bottom-right-radius: 173.1px;
+border-bottom-left-radius: 173.1px;
+margin-top: 12px;
+margin-left: 7px;
+}
+.footer_bottom{
+background-image: radial-gradient(circle, #13171a 0%, #071e1ecf 100%); */
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+/* background-image: radial-gradient(circle, #02111c 0%, #1b3838 100%); */
+/* background: url('ss.png');
+background-size: cover; */
+}
+.heading_two h5 {
+color: #f3f9f6;
+margin-left: 10px;
+margin-right: 10px;
+font-family: 'Poppins', sans-serif;
+font-size: 21px;
+text-align: center;
+line-height: 73.6px;
+font-weight: 600;
+margin-top: -4px;
+}
+.subhead {
+text-align: center;
+font-family: 'Poppins', sans-serif;
+color: white;
+line-height: 40.13px;
+font-weight: 600;
+letter-spacing: 1px;
+font-size: 18px;
+margin-bottom: 51px;
+}
+.sam {
+width: 100%;
+border-radius: 7px;
+border: 1px solid #5a5252;
+background: #000e021f;
+box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+margin-top: 8px;
+height: 473px;
+}
+.met{
+display: flex;
+justify-content: left !important;
+align-items: center !important;
+margin-bottom: 10px !important
+}
+.footer_logo{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+address h4 {
+font-size: 15px;
+color: white;
+text-align: center;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+line-height: 26.69px;
+}
+.align{
+text-align: center;
+}
+.thamb{
+width: 270px;
+margin-left: 74px;
+}
+.qrcode img{
+width: 177px;
+height: 178px;
+padding: 13px;
+margin-top: 17px;
+margin-right: 110px !important;
+}
+.aboutus h4 {
+color: white;
+font-family: 'Poppins', sans-serif;
+margin-top: 20px;
+font-size: 16px;
+margin-left: 22px;
+text-align: left !important;
+}
+.blockway{
+width: 279px !important;
+margin-top: 20px !important;
+margin-left: 2px !important;
+}
+.bar img {
+margin-top: -31px;
+width: 30px;
+height: 27px;
+cursor: pointer;
+margin-right: -321px;
+z-index: 999999999999999999999999;
+}
+
+	.sskfoot {
+    margin-left: -6px !important;
+    position: relative;
+}
+.samsungoneplus {
+    margin-left: 3px !important;
+}
+.smt{
+	    width: 100%;
+    display: flex;
+    justify-content: left !important;
+}
+.bar {
+width: 100%;
+display: flex;
+justify-content: center;
+margin-top: -10px;
+}
+.ttttt{
+position: absolute;
+bottom: 14px;
+font-weight: bold;
+letter-spacing: 2px;
+left: 10px;
+font-size: 25px;
+color: white;
+font-family: 'Poppins';
+}
+.abtheading {
+color: #FFFFFF;
+opacity: 0.7;
+font-family: 'Poppins';
+font-weight: 600;
+font-size: 20px !important;
+letter-spacing: 2px !important;
+}
+.invone{
+text-align: center;
+}
+.galbtn {
+background: linear-gradient(92.5deg, #1DFF85 0.77%, #1DFFE4 101.95%) !important;
+margin-top: -16px;
+margin-left: 109px;
+width: 117px;
+height: 48px;
+padding: 9px 20px;
+text-transform: uppercase;
+font-size: 16px;
+color: #000000;
+border-radius: 5px;
+font-weight: bold;
+}
+.yyy{
+height: 448px !important;
+}
+.sls{
+	display: none;
+}
+.galbtntwo {
+position: absolute;
+left: 11px;
+z-index: 99999999999999999999;
+top: 397px;
+}
+.mypoipred{
+	    margin-left: 24px  !important;
+}
+}
+/* =========xx==========Mobile screen layout============xx======== */
+/* ===================iphone 5.5 inch screem  layout============== */
+@media only screen and (max-width: 600px) {
+}
+/* =========xx==========iphone 5.5 inch screem  layout========xx== */
