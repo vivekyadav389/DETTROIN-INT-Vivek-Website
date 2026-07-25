@@ -1,24 +1,30 @@
-# DETTROIN Internship Project
+# Krishna International School - Website Redesign
+
+This repository contains the completely redesigned website for Krishna International School, developed as part of my internship program.
 
 ## Intern Details
-- **Full Name**: Vivek Yadav
-- **Intern ID**: [YOUR_INTERN_ID]
-- **Email Address**: [YOUR_EMAIL]
-- **GitHub Username**: vivekyadav389
-- **Selected Website**: Krishna International School (KIS) Redesign
-- **Live Demo Link**: [LIVE_DEMO_LINK]
+- **Full Name:** Vivek Yadav
+- **Intern ID:** [Your Intern ID]
+- **Email Address:** [Your Email Address]
+- **GitHub Username:** vivekyadav389
+
+## Project Details
+- **Selected Website:** Krishna International School (kisaligarh.com)
+- **Live Demo Link:** [Your Live Demo Link here]
 
 ## Technologies Used
-- React.js
-- Vite
-- Tailwind CSS (v4)
-- PostCSS
-- Lucide React (Icons)
-- shadcn/ui patterns
+- **Frontend Framework:** React (with Vite)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **UI Components:** Radix UI / Shadcn UI
+- **Icons:** Lucide React
+- **Routing:** React Router DOM
 
 ## Key Improvements Made
-- Initialized modern React app with Vite for fast build times.
-- Configured Tailwind CSS for utility-first styling.
-- Created reusable components (Navbar, Hero, Stats, Features, About, Principal).
-- Improved overall UI/UX with modern design aesthetics, typography, and responsive layouts.
-- Replaced outdated structure with semantic HTML and component-driven architecture.
+1. **Modernized UI/UX:** Transformed the outdated, boxy design into a fluid, modern, and aesthetically pleasing interface with a cohesive color palette (Navy, Cream, Gold).
+2. **Advanced Navigation:** Built a fully responsive Navbar featuring detailed, multi-level dropdown menus with smooth transitions and hover effects.
+3. **Interactive Homepage:** Revamped the homepage with animated statistics bars, interactive feature cards, and dynamic scroll animations for "Events that Shape Memories".
+4. **Enhanced "About KIS" Experience:** Created a seamless "About Us" section utilizing tabbed navigation and URL-hash routing to jump directly to sections like "Principal's Message" or "Quintessential Campus".
+5. **Dedicated "Join Us" Portal:** Replaced the generic contact page with a robust career opportunities page detailing current vacancies and required skills.
+6. **Optimized Performance:** Leveraged Vite and React to significantly improve page load speeds and overall responsiveness across all devices.
+7. **Comprehensive Footer Redesign:** Structured a clean, organized footer with integrated social links, QR codes, and clear site maps.
