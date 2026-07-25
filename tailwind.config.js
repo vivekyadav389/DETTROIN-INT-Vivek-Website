@@ -8,18 +8,21 @@ module.exports = {
     extend: {
       colors: {
         kis: {
-          cream: '#FDFBF7',
-          navy: '#1A2E44',
-          border: '#E2E8F0',
-          foreground: '#334155',
-          primary: '#0F172A',
-          'primary-foreground': '#FFFFFF',
-          'muted-foreground': '#64748B'
+          foreground: 'var(--kis-foreground)',
+          border: 'var(--kis-border)',
+          primary: 'var(--kis-primary)',
+          'primary-foreground': 'var(--kis-primary-foreground)',
+          muted: 'var(--kis-muted)',
+          'muted-foreground': 'var(--kis-muted-foreground)',
+          accent: 'var(--kis-accent)',
+          navy: 'var(--kis-navy)',
+          'navy-light': 'var(--kis-navy-light)',
+          cream: 'var(--kis-cream)',
         }
       },
       fontFamily: {
-        'kis-headings': ['Inter', 'sans-serif'],
-        'kis-body': ['Roboto', 'sans-serif'],
+        "kis-body": "var(--font-kis-body)",
+        "kis-headings": "var(--font-kis-headings)",
       }
     },
   },
